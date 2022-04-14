@@ -12,23 +12,23 @@
   <% end %>
 
   <div class="my-5">
-    <%= form.label :ssn %>
+    <%= form.label :ssn, "SSN" %>
     <%= form.text_field :ssn, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
   <div class="my-5">
-    <%= form.label :dl_front %>
+    <%= form.label :dl_front, "Driving License Front" %>
     <%= form.file_field :dl_front, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
     <div class="my-5">
-    <%= form.label :dl_back %>
+    <%= form.label :dl_back, "Driving License Back" %>
     <%= form.file_field :dl_back, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
   <div class="my-5">
-    <%= form.label :picture %>
+    <%= form.label :picture, "Picture of you holding your ID" %>
     <%= form.file_field :picture, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
   <div class="inline">
-    <%= form.submit class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
+    <%= form.submit "Verify Identity", class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
   </div>
 <% end %>

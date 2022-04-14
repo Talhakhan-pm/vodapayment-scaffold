@@ -11,7 +11,7 @@
     </div>
   <% end %>
   <div class="my-5">
-    <%= form.label :address_1 %>
+    <%= form.label :address_1, "Address" %>
     <%= form.text_field :address_1, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
@@ -31,6 +31,6 @@
   </div>
 
   <div class="inline">
-    <%= form.submit class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
+    <%= form.submit "Continue", class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
   </div>
 <% end %>
