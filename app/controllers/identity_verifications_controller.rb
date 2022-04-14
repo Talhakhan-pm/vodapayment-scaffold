@@ -69,6 +69,6 @@ class IdentityVerificationsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def identity_verification_params
-      params.require(:identity_verification).permit(:ssn)
+      params.require(:identity_verification).permit(:ssn, :dl_back, :dl_front, :picture)
     end
 end

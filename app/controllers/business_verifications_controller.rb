@@ -26,7 +26,7 @@ class BusinessVerificationsController < ApplicationController
 
     respond_to do |format|
       if @business_verification.save
-        format.html { redirect_to root_path }
+        format.html { redirect_to static_pages_about_path }
         format.json { render :show, status: :created, location: @business_verification }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -39,7 +39,7 @@ class BusinessVerificationsController < ApplicationController
   def update
     respond_to do |format|
       if @business_verification.update(business_verification_params)
-        format.html { redirect_to business_verification_url(@business_verification), notice: "Business verification was successfully updated." }
+        format.html { redirect_to static_pages_about_path, notice: "Business verification was successfully updated." }
         format.json { render :show, status: :ok, location: @business_verification }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -71,6 +71,6 @@ class BusinessVerificationsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def business_verification_params
-      params.require(:business_verification).permit(:business_name, :ein, :merchant_id)
+      params.require(:business_verification).permit(:business_name, :ein, :bank_log)
     end
 end
