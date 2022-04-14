@@ -1,0 +1,2 @@
+module BasicVerificationsHelper
+end

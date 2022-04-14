@@ -1,0 +1,32 @@
+<div id="<%= dom_id basic_verification %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Merchant:</strong>
+    <%= basic_verification.merchant_id %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Address 1:</strong>
+    <%= basic_verification.address_1 %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">City:</strong>
+    <%= basic_verification.city %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">State:</strong>
+    <%= basic_verification.state %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Zip:</strong>
+    <%= basic_verification.zip %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this basic verification", basic_verification, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Edit this basic verification', edit_basic_verification_path(basic_verification), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>
