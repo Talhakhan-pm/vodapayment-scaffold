@@ -26,10 +26,10 @@ class BasicVerificationsController < ApplicationController
     respond_to do |format|
       if @basic_verification.save
         format.html { redirect_to new_merchant_identity_verification_path(@merchant) }
-        format.json { render :show, status: :created, location: @basic_verification }
+        
       else
         format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @basic_verification.errors, status: :unprocessable_entity }
+        flash.now[:notice] = "Works!"
       end
     end
   end
