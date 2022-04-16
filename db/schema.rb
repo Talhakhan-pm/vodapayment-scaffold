@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_04_14_061258) do
+ActiveRecord::Schema[7.0].define(version: 2022_04_15_143635) do
   create_table "action_text_rich_texts", force: :cascade do |t|
     t.string "name", null: false
     t.text "body"
@@ -66,7 +66,18 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_14_061258) do
     t.string "ein"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "website"
+    t.string "phone"
+    t.string "address"
     t.index ["merchant_id"], name: "index_business_verifications_on_merchant_id"
+  end
+
+  create_table "fundings", force: :cascade do |t|
+    t.string "title"
+    t.string "checking_num"
+    t.string "routing_num"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "identity_verifications", force: :cascade do |t|
@@ -74,6 +85,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_14_061258) do
     t.string "ssn"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.date "dob"
     t.index ["merchant_id"], name: "index_identity_verifications_on_merchant_id"
   end
 

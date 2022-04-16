@@ -12,17 +12,53 @@
   <% end %>
 
   <div class="my-5">
-    <%= form.label :business_name %>
+    <%= form.label :business_name, "Legal Business Name" %>
     <%= form.text_field :business_name, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
   <div class="my-5">
-    <%= form.label :ein %>
+    <%= form.label :ein, "EIN Number" %>
     <%= form.text_field :ein, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
   <div class="my-5">
-    <%= form.label :bank_log %>
+    <%= form.label :address, "Business address"%>
+    <%= form.text_field :address, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+  <div class="my-5">
+    <%= form.label :website, "Website URL" %>
+     <div class="mt-1 flex rounded-md shadow-sm">
+      <span class="inline-flex items-center px-3 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 text-sm">
+        https://
+      </span>
+      <%= form.text_field :website, class: "focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300"%>
+    </div>
+  </div>
+
+    <div class="sm:col-span-2">
+    <label for="business-phone" class="block text-sm font-medium text-gray-700">Business Phone Number</label>
+    <div class="mt-1 relative rounded-md shadow-sm">
+      <div class="absolute inset-y-0 left-0 flex items-center">
+        <label for="country" class="sr-only">Country</label>
+        <select id="country" name="country" class="h-full py-0 pl-4 pr-8 border-transparent bg-transparent text-gray-500 focus:ring-indigo-500 focus:border-indigo-500 rounded-md">
+          <option>US</option>
+          <option>CA</option>
+          <option>EU</option>
+        </select>
+      </div>
+        <%= form.text_field :phone, class: "py-3 px-4 block w-full pl-20 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md", placeholder: "+1 (555) 987-6543"%>
+    </div>
+  </div>
+    <div class="my-5">
+    <%= form.label :bank_log, "Personal Statement (PDF) " %>
     <%= form.file_field :bank_log, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+      <div class="my-5">
+    <%= form.label :business_doc_1, "Articles of Organization" %>
+    <%= form.file_field :business_doc_1, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+      <div class="my-5">
+    <%= form.label :business_doc_2, "Letter of Incorporation " %>
+    <%= form.file_field :business_doc_2, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
   <div class="inline">

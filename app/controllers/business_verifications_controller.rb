@@ -26,7 +26,7 @@ class BusinessVerificationsController < ApplicationController
 
     respond_to do |format|
       if @business_verification.save
-        format.html { redirect_to static_pages_about_path }
+        format.html { redirect_to funding_path(:new) }
         format.json { render :show, status: :created, location: @business_verification }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -71,6 +71,6 @@ class BusinessVerificationsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def business_verification_params
-      params.require(:business_verification).permit(:business_name, :ein, :bank_log)
+      params.require(:business_verification).permit(:business_name, :ein, :bank_log, :website, :phone, :address, :business_doc_1, :business_doc_2)
     end
 end

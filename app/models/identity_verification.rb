@@ -4,5 +4,6 @@ class IdentityVerification < ApplicationRecord
   has_one_attached :dl_back
   has_one_attached :picture
 
-  validates_presence_of :ssn, :dl_front, :dl_back, :picture
+  validates :ssn, length: { maximum: 11 }
+
 end

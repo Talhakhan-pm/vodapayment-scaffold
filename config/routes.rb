@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :fundings
   resources :merchants do
     resources :basic_verifications
     resources :identity_verifications
