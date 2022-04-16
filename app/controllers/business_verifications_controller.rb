@@ -71,6 +71,6 @@ class BusinessVerificationsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def business_verification_params
-      params.require(:business_verification).permit(:business_name, :ein, :bank_log, :website, :phone, :address, :business_doc_1, :business_doc_2)
+      params.require(:business_verification).permit(:business_name, :ein, :bank_log, :phone, :address, :business_doc_1, :business_doc_2)
     end
 end
