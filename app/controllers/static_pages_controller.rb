@@ -3,7 +3,7 @@ class StaticPagesController < ApplicationController
   def index
   end
 
-  def about
+  def submit
   end
 
   def pricing
