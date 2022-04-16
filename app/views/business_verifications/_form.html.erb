@@ -24,7 +24,15 @@
     <%= form.label :address, "Business address"%>
     <%= form.text_field :address, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
-
+  <div class="my-5">
+    <%= form.label :website, "Website URL" %>
+     <div class="mt-1 flex rounded-md shadow-sm">
+      <span class="inline-flex items-center px-3 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 text-sm">
+        https://
+      </span>
+      <%= form.text_field :website, class: "focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300"%>
+    </div>
+  </div>
 
     <div class="sm:col-span-2">
     <label for="business-phone" class="block text-sm font-medium text-gray-700">Business Phone Number</label>
